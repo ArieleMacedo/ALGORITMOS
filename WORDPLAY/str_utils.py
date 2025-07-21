@@ -18,9 +18,9 @@ def contem_caracter(palavra, caracter):
 def uses_only(palavra, letra_permitidas):
 
     for letra in palavra:
-        if not contem_caracter(letra_permitidas, letra):
-            return False
-    return True
+        if contem_caracter(letra_permitidas, letra):
+            return palavra
+    return False
 
 
 def uses_all(palavra, letras_obrigatorias):
@@ -72,3 +72,39 @@ def eh_minuscula(letra):
 
 def eh_maiuscula(letra):
     return ord(letra) >= 65 and ord(letra)<= 90
+
+def mapear(colecao, funcao_transformadora):
+    nova_colecao = []
+    
+    for item in colecao:
+        item_transformado = funcao_transformadora(item)
+        nova_colecao.append(item_transformado)
+        
+    return nova_colecao
+
+
+def filtrar(colecao, criterio):
+    nova_colecao = []
+    
+    for item in colecao:
+        if criterio(item):
+            nova_colecao.append(item)
+            
+    return nova_colecao
+
+
+def reduzir(colecao,redutora,inicial):
+    acumulado = inicial
+    for item in colecao:
+       acumulado = redutora(acumulado,item)
+    
+    return acumulado
+    
+
+def obter_inteiro(label):
+    while True:
+        try:
+            numero = int(input(label))
+            return numero
+        except ValueError:
+            print("O número tem que ser inteiro")

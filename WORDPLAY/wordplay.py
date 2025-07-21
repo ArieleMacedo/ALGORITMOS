@@ -33,7 +33,6 @@ def show_menu():
     1- Palavras com N caracteres:
     2 -Palavras sem a Letra:
     3- Palavras sem Letras Proibidas
-    4- Palavras com Letras Permitidas
     5- Palavras com Letras Obrigatórias
     6- Palavras em Ordem Alfabetica
     
@@ -49,9 +48,8 @@ def palavras_com_n_caracteres(caracter, palavra):
 
 def palavra_pelo_tamanho():
     tamanho = int(input("Qtd minima de Caracteres:"))
-    arquivo = open(
-        "C:\\Users\\ariel\\Downloads\\Algoritmos (1)-20250523T183030Z-1-001\\Algoritmos (1)\\String\\palavrass.txt"
-    )
+    arquivo = open("br-sem-acentos.txt")
+
     contador = 0
     contador_filtro = 0
 
@@ -78,10 +76,7 @@ def mostrar_palavra_sem_a_letra(palavra, letra):
 
 
 def palavras_sem_a_letra():
-    arquivo = open(
-        "C:\\Users\\ariel\\Downloads\\Algoritmos (1)-20250523T183030Z-1-001\\Algoritmos (1)\\String\\palavrass.txt"
-    )
-
+    arquivo = open("br-sem-acentos.txt")
     proibida = input("Qual é a letra proibida? ")
 
     contador = 0
@@ -115,9 +110,8 @@ def mostrar_palavras_sem_letras_proibidas(letras_proibidas):
 
 
 def mostrar_palavra_com_letras_permitidas(letras_permitidas):
-    arquivo = open(
-        "C:\\Users\\ariel\\Downloads\\Algoritmos (1)-20250523T183030Z-1-001\\Algoritmos (1)\\String\\palavrass.txt"
-    )
+    arquivo = open("br-sem-acentos.txt")
+
     contador = 0
     contador_filtro = 0
 
@@ -133,9 +127,8 @@ def mostrar_palavra_com_letras_permitidas(letras_permitidas):
 
 
 def palavras_com_letras_obrigatorias(mandatory_letters):
-    arquivo = open(
-        "C:\\Users\\ariel\\Downloads\\Algoritmos (1)-20250523T183030Z-1-001\\Algoritmos (1)\\String\\palavrass.txt"
-    )
+    arquivo = open("br-sem-acentos.txt")
+
     contador = 0
     contador_filtro = 0
 
@@ -150,9 +143,8 @@ def palavras_com_letras_obrigatorias(mandatory_letters):
     print(f"Total/Filtro: {contador_filtro}/ {contador} ({porcentagem:.3f}) %")
 
 def palavras_em_ordem_alfabetica():
-    arquivo = open(
-        "C:\\Users\\ariel\\Downloads\\Algoritmos (1)-20250523T183030Z-1-001\\Algoritmos (1)\\String\\palavrass.txt"
-    )
+    arquivo = open("br-sem-acentos.txt")
+
     contador = 0
     contador_filtro = 0
     
